@@ -1,8 +1,8 @@
 # Trabalho_software
 Trabalhinho topzão 
-Relógio
+Pomodoro
 
-Concepção: O Projeto possui como alvo o público que necessita de uma forma de notificação de que determinado período de tempo passou. Com ele o gerenciamento do tempo utilizado é aperfeiçoado, facilitando a organização do usuário para começar e finalizar atividades do dia a dia. O Microcontrolador contará com um display LED IC2 LCD que mostra o Horário de Brasília e com um LED avulso que piscará sempre que o período de tempo já determinado for atingido.
+Concepção: O público que visamos atingir são aqueles que buscam ter uma maior produtividade. Com ele o gerenciamento do tempo utilizado é aperfeiçoado, facilitando a organização do usuário para começar e finalizar atividades do dia a dia. O software vai controlar o tempo de trabalho, 25 minutos, e o de descanso, 5 minutos, do usuário emitindo um aviso no display. 
 
-Levantamentos: ao final do projeto visamos obter um relógio digital que mande uma notificação a cada x minutos. Expectativas: fazer um código limpo, simples e que entregue o que o projeto propõe. Objetivos prioritários: relógio esteja ajustado ao fuso horário que estamos (de Brasília) e que as notificações funcionem no horário pré-definido pelos programadores.  
+Levantamentos: ao final do projeto visamos obter um pomodoro que mande uma notificação a cada 25 minutos de trabalho intervalado por outros 5 minutos de descanso (que ao final deste intervalo também notifica que o tempo de descanso acabou). Expectativas: fazer um código limpo, simples e que entregue o que o projeto propõe. Objetivos prioritários: sermos capazes de recriar o pomodoro a sua forma tradicional, com 25 minutos em que o usuário se dedicara a uma atividade e 5 minutos de descanso.
 
