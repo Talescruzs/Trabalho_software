@@ -5,4 +5,4 @@ O público que visamos atingir são aqueles que buscam ter uma maior produtivida
 ### Levantamentos: 
 Ao final do projeto visamos obter um pomodoro que mande uma notificação a cada 25 minutos de trabalho intervalado por outros 5 minutos de descanso (que ao final deste intervalo também notifica que o tempo de descanso acabou). Expectativas: fazer um código limpo, simples e que entregue o que o projeto propõe. Objetivos prioritários: sermos capazes de recriar o pomodoro a sua forma tradicional, com 25 minutos em que o usuário se dedicara a uma atividade e 5 minutos de descanso. Expectativas do gerente de projeto: entregar um produto que cumpra os requisitos desejados, recriar o pomodoro. Expectativas da equipe desenvolvimento: aprofundar os conhecimentos da equipe em Python e Micropython.
 ### Diagrama UML:
-![Diagrma_UML.png](https://github.com/Talescruzs/Trabalho_software/commit/8c3591b92ec27d72bbaf40925834b128d0e2390f)
+<img src = "imgs/Diagrama_UML.png"
