@@ -1,4 +1,5 @@
 import time
+import framebuf
 
 class pomodoro(object):
     def __init__(self):
