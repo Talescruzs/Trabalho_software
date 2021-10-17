@@ -1,24 +1,38 @@
 import time
+import machine
 import framebuf
+
+scl = machine.Pin('X9')
+sda = machine.Pin('X10')
+i2c = machine.I2C(scl=scl, sda=sda)
+fbuf = framebuf.FrameBuffer(bytearray(64 * 32 // 8), 64, 32, framebuf.MONO_HLSB)
 
 class pomodoro(object):
     def __init__(self):
-        self.estudar() # chama o temporizador do estudo
-    def estudar(self): # temporizador do estudo
-        print('Vai estudar') # aparece oq tem que aparecer quando estiver na hr de estudar
-        time.sleep(1500) # espera 25 minutos
-        self.descansar() # chama o temporizador do descanso
-    def descansar(self): # temporizador do descanso
-        print('Vai descansar') # aparece oq tem que aparecer quando estiver na hr de descansar
-        time.sleep(300) # espera 5 minutos
-        self.estudar() # chama o temporizador do estudo
-# e fechou o pastel do timer em looping, agr é só add a telinha do micropy falando os negocios :)
+        self.estudar()
+    def estudar(self):
+        self.tela_estudo()
+        time.sleep(1500)
+        self.descansar()
+    def descansar(self):
+        self.tela_descanso()
+        time.sleep(300)
+        self.estudar()
+    def tela_estudo(self):
+        fbuf.fill(0)
+        fbuf.text('WORK', 16, 7, 1)
+        fbuf.text('TIME', 16, 17, 1)
+        return i2c.writeto(8, fbuf)
+    def tela_descanso(self):
+        fbuf.fill(1)
+        fbuf.text('RELAX', 12, 7, 0)
+        fbuf.text('TIME', 16, 17, 0)
+        return i2c.writeto(8,fbuf)
 
 def main():
-    #teste de uso que liga o temporizador, se tu tiver 30 minutos 
-    # pra ver funcionando pode tentar mas confia que ta certo
     timer=pomodoro()
-    timer.estudar()
+    timer.__init__()
+
 
 if __name__ == '__main__':
     main()
