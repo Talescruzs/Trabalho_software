@@ -12,18 +12,18 @@ class pomodoro(object):
         global i2c
         global fbuf
         global volta
-        volta = 1
+        volta = 10
         scl = machine.Pin('X9')
         sda = machine.Pin('X10')
         i2c = machine.I2C(scl=scl, sda=sda)
         fbuf = framebuf.FrameBuffer(bytearray(64 * 32 // 8), 64, 32, framebuf.MONO_HLSB, 64)
     def estudar(self):
         self.tela_estudo()
-        time.sleep(1500)
+        time.sleep(3)
         self.descansar()
     def descansar(self):
         self.tela_descanso()
-        time.sleep(300)
+        time.sleep(3)
         global volta
         volta+=1
         self.estudar()
@@ -31,13 +31,13 @@ class pomodoro(object):
         fbuf.fill(0)
         fbuf.text('WORK', 16, 3, 1)
         fbuf.text('TIME', 16, 12, 1)
-        fbuf.text('VOLTA:%d'%volta, 4, 22, 1)
+        fbuf.text('VOLTA:%d'%volta, 0, 22, 1)
         return i2c.writeto(8, fbuf)
     def tela_descanso(self):
         fbuf.fill(1)
         fbuf.text('RELAX', 12, 3, 0)
         fbuf.text('TIME', 16, 12, 0)
-        fbuf.text('VOLTA:%d'%volta, 4, 22, 0)
+        fbuf.text('VOLTA:%d'%volta, 0, 22, 0)
         return i2c.writeto(8,fbuf)
 
 def main():
