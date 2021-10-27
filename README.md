@@ -9,10 +9,10 @@ Trabalhinho topzão Pomodoro
 * Expectativas do gerente de projeto: entregar um produto que cumpra os requisitos desejados, recriar o pomodoro. 
 * Expectativas da equipe desenvolvimento: aprofundar os conhecimentos da equipe em Python e Micropython. 
 * [link_para_projeto](micropython.py)
-### Sprints: <br />
-1.Concepção inicial apenas da parte do temporizador, estudo da biblioteca “time”, levamos um dia para implementar esta funcionalidade. <br />
-2.Concepção inicial das mensagens exibidas na tela do microcontrolador, estudo das bibliotecas “machine” e “ framebuf”, levamos um dia para implementar. <br />
-3.União dos scripts criando um pomodoro funcional, lavamos dois dias para esta implementação. Dificuldade na organização do script. <br />
-4.Otimização e organização do código para potencial ganho de escala e maior eficiência em possíveis manutenções, além de adição da funcionalidade que mostra na tela o ciclo do pomodoro que o usuário está, levamos dois dias para implementar corretamente. Dificuldade para conceber onde colocar as configurações padrão da tela dentro do objeto "pomodoro".
+### Sprints: <br>
+1.Reunião feita em 10/10/2021. Estima-se que em cinco dias seja possível o estudo da biblioteca "time" e "framebuf", posteriormente seguindo para a construção do temporizador e template dos displays. Prazo final dia 16/10/2021 
+Pós-Reunião: Facilmente concluído no tempo estipulado (13/10/2021), com êxito nas tarefas apresentadas, entretanto foi necessário o estudo e aplicação da biblioteca "machine" para o funcionamento do código. O tempo restante será utilizado para adiantar o resto do trabalho.  <br>
+2.Reunião feita em 13/10/2021. Estima-se que em até sete dias seja possível a junção dos códigos dos displays junto ao temporizador. O prazo máximo é 20/10/2021
+Pós-Reunião: Foi percebido certa dificuldade na organização do script. Apesar dos obstáculos encontrados, conseguimos finalizar no tempo estipulado, e ainda foi implementada a funcionalidade que mostra o ciclo do Pomodoro, juntamente de uma otimização geral do código. Finalizado em 18/10/2021.
 ### Diagrama UML:
 <img src = "imgs/Diagrama_UML.png">
