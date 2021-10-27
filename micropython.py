@@ -32,13 +32,13 @@ class pomodoro(object):
         fbuf.text('WORK', 16, 3, 1)
         fbuf.text('TIME', 16, 12, 1)
         fbuf.text('VOLTA:%d'%volta, 0, 22, 1)
-        return i2c.writeto(8, fbuf)
+        i2c.writeto(8, fbuf)
     def tela_descanso(self):
         fbuf.fill(1)
         fbuf.text('RELAX', 12, 3, 0)
         fbuf.text('TIME', 16, 12, 0)
         fbuf.text('VOLTA:%d'%volta, 0, 22, 0)
-        return i2c.writeto(8,fbuf)
+        i2c.writeto(8,fbuf)
 
 def main():
     timer=pomodoro()
