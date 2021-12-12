@@ -4,7 +4,6 @@ import machine
 import framebuf
 from inspect import signature
 from micropython import pomodoro
-from micropython import pomodoro as func
 
 
 class testador_pomodoro(unittest.TestCase):
@@ -13,7 +12,7 @@ class testador_pomodoro(unittest.TestCase):
         Função para testar o temporizador do pomodoro.
         """
 
-        params = signature(func).parameters
+        params = signature(pomodoro).parameters
         self.assertEqual(len(params), 2, "A função deveria possuir 2 parâmetros, tempo de estudo e tempo de descanso")
         test1 = pomodoro(tempo_estudo=3, tempo_descanso=2)
         test2 = pomodoro(tempo_estudo=8, tempo_descanso=5)
